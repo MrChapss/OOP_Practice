@@ -1,31 +1,37 @@
 package inheritance;
+import java.util.Scanner;
 
 public class OOP_Inherit {
 	public static void main(String[] args) {
+		// declare the scanner
+		Scanner input = new Scanner(System.in);
 		// create an object from the class
 		Questions question = new Questions();
 		Results output = new Results();
 		Car myCar1 = new Car();
-		
-		//update ko to bukas (matutulog na ako)
-		Baicycle myBike1 = new Baicycle();
+	
+		 
+		//Baicycle myBike1 = new Baicycle();
 		
 		// 1st Question
 		question.askingName();
-		myCar1.name = myCar1.input.nextLine();
+		myCar1.setName(input.nextLine());
 		
 		// 2nd Question
 		question.askingColor();
-		myCar1.color = myCar1.input.nextLine();
+		myCar1.setColor(input.nextLine());
 		
 		// 3rd Question
 		question.askingSpeed();
-		myCar1.speed = myCar1.input.nextInt();
+		myCar1.setSpeed(input.nextInt());
 		
 		// printing the output
-		output.nameOfCar(myCar1.name);
-		output.colorOfCar(myCar1.color);
-		output.speedOfCar(myCar1.speed);
+		output.nameOfCar(myCar1.getName());
+		output.colorOfCar(myCar1.getColor());
+		output.speedOfCar(myCar1.getSpeed());
+		
+		// closing the scanner
+		input.close();
 
 	}
 }
