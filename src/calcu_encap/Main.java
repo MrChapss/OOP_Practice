@@ -20,6 +20,7 @@ public class Main {
 			System.out.print("Choose from (+ , -, *, /): ");
 			methods.calculate(input.next());
 			
+			// ill fix this later(I will add a method in RetryFunc)
 			System.out.print("Do you wanna break from the ads? input 'stop': ");
 			retry.setUserRetry(input.next());
 			
