@@ -1,16 +1,24 @@
 package calcu_encap;
 
 public class RetryFunc {
-	private String userAnswer;
-	// gagagwa ako ng method dto na mag loop (ito yung ilalagay ko sa while in do while)
-	public void setUserRetry(String userInput) {
-		this.userAnswer = userInput;
+	private String userInput;
+	
+	public void setTryAgain(String userInput) {
+		this.userInput = userInput;
+		
 	}
 	
-	public String getUserRetry() {
-		return userAnswer;
+	public String getTryAgain() {
+		return userInput;
 	}
-	
-	
-	
+
+	public Boolean tryAgain(String input) {
+		if(input.equalsIgnoreCase("exit")) {
+			System.out.println("Exiting...");
+			return false;
+		} else {
+			return true;
+		}
+		
+	}
 }

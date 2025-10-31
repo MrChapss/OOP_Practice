@@ -20,13 +20,12 @@ public class Main {
 			System.out.print("Choose from (+ , -, *, /): ");
 			methods.calculate(input.next());
 			
-			// ill fix this later(I will add a method in RetryFunc)
-			System.out.print("Do you wanna break from the ads? input 'stop': ");
-			retry.setUserRetry(input.next());
+			System.out.println(methods.getResult());
 			
-		} while (!retry.getUserRetry().equalsIgnoreCase("stop"));
-		
-		System.out.println(methods.getResult());
+			System.out.print("Input 'exit' to stop: ");
+			retry.setTryAgain(input.next());
+			
+		} while (retry.tryAgain(retry.getTryAgain()));
 		
 		input.close();
 	}
